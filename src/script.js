@@ -1,4 +1,4 @@
-// fiyatı 30 ile 100 arasında kaç adet ürün var?
+
 // ismi a ile başlayan ürünleri consola yazdır
 // ismi a ile biten ürünleri consola yazdır
 // id si 10 olan ürünün adını yazdır
@@ -996,3 +996,31 @@ console.log(product?.name);
 
 var sortedProducts = products.sort((a,b) => a.unitPrice - b.unitPrice)
 console.log("sortedProducts", sortedProducts);
+
+
+//**************************/
+
+
+// fiyatı 30 ile 100 arasında kaç adet ürün var?
+
+var filteredProducts3= products.filter(function (product) {
+    return product.unitPrice >=30 && product.unitPrice<=100; 
+});
+
+var countProducts3 = filteredProducts3.length;
+console.log("fiyatı 30 ile 100 arasında kaç adet ürün var? : " + countProducts3);
+
+
+// ID'si 10 olan ürünün adını yazdır
+
+var productId = products.find(function(product) {
+    return product.id===10;
+});
+var message = productId ? "ID'si 10 olan ürünün adi: " + productId.name : "ID'si 10 olan ürün bulunamadi.";
+
+console.log(message);
+
+//en pahalı urunun adı
+
+
+//en uygun urunun adı
